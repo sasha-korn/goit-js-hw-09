@@ -20,13 +20,15 @@ function onInput(event) {
 }
 
 function initForm() {
-  formData = JSON.parse(localStorage.getItem('feedback-form-state'));
-
-  if (form.elements.email) {
-    form.elements.email.value = formData.email;
-  }
-  if (form.elements.message) {
-    form.elements.message.value = formData.message;
+  let storageData = JSON.parse(localStorage.getItem('feedback-form-state'));
+  if (storageData) {
+    formData = storageData;
+    if (formData.email) {
+      form.elements.email.value = formData.email;
+    }
+    if (formData.message) {
+      form.elements.message.value = formData.message;
+    }
   }
 }
 
