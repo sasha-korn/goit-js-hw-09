@@ -89,4 +89,4 @@ const imageTemplate = images
 const galleryWrapper = document.querySelector('.gallery');
 galleryWrapper.innerHTML = imageTemplate;
 
-const gallery = new SimpleLightbox('.gallery a', {});
+const gallery = new SimpleLightbox('.gallery a', { captionDelay: 250 });
